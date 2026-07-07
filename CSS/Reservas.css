@@ -1,0 +1,239 @@
+.reservas-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 24px;
+  background: var(--white);
+}
+
+.panel h2 {
+  margin: 0 0 22px;
+  font-size: 16px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.chip {
+  padding: 9px 14px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.chip.active {
+  color: var(--white);
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.tables {
+  max-height: 500px;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  padding-right: 6px;
+}
+
+.tables article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.tables h3,
+.tables p {
+  margin: 0 0 8px;
+}
+
+.tables p,
+.tables span {
+  color: var(--muted);
+}
+
+.tables strong {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: #16864a;
+  background: #ddf8e9;
+  font-size: 12px;
+}
+
+.tables .reserved {
+  opacity: .58;
+}
+
+.tables .reserved strong {
+  color: #b35050;
+  background: #ffe5e5;
+}
+
+.reservation-side {
+  display: grid;
+  gap: 24px;
+}
+
+.form-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.info-box {
+  padding: 24px;
+  border-radius: 4px;
+  background: #eef7ff;
+  color: #363a3d;
+}
+
+.info-box h3 {
+  margin: 0 0 12px;
+}
+
+.info-box p {
+  margin: 6px 0;
+}
+
+@media (max-width: 900px) {
+  .reservas-layout,
+  .tables,
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chip {
+  cursor: pointer;
+  background: var(--white);
+  transition: all 0.2s ease;
+  font-family: inherit;
+  outline: none;
+}
+
+.chip:hover {
+  border-color: var(--orange);
+}
+
+.tables article:not(.reserved) {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tables article:not(.reserved):hover {
+  border-color: var(--orange);
+  box-shadow: 0 4px 12px rgba(220, 114, 53, 0.1);
+  transform: translateY(-2px);
+}
+
+.tables article.selected {
+  border-color: var(--orange);
+  background: #fff8f5;
+  box-shadow: 0 4px 12px rgba(220, 114, 53, 0.15);
+}
+
+/* Estilos do Modal de Sucesso */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  width: min(500px, calc(100% - 32px));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  text-align: center;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  background: #ddf8e9;
+  font-size: 32px;
+  color: #16864a;
+  margin: 0 auto 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.modal-content h2 {
+  margin: 0 0 14px;
+  color: var(--ink);
+  font-size: 24px;
+}
+
+.modal-content p {
+  margin: 0 0 24px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.modal-details {
+  background: #f8f6f4;
+  padding: 18px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  text-align: left;
+  border: 1px solid var(--line);
+}
+
+.modal-details h4 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 6px;
+  font-size: 14px;
+}
+
+.modal-details p {
+  margin: 6px 0;
+  font-size: 13px;
+  color: #3f3b37;
+}
+
+.modal-details strong {
+  color: var(--ink);
+}

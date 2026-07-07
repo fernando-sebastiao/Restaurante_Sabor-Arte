@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Leia testemunhos, avaliações e opiniões de clientes sobre pratos, atendimento, reservas e ambiente do Restaurante Sabor & Arte em Angola."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://saborarte.com/HTML/Testemunhos.html" />
+    <meta property="og:title" content="Testemunhos de Clientes | Restaurante Sabor & Arte" />
+    <meta property="og:description" content="Opiniões reais sobre a experiência gastronômica do Sabor & Arte." />
+    <meta property="og:image" content="https://saborarte.com/MEDIA/hero-dining.jpg" />
+    <title>Testemunhos de Clientes | Restaurante Sabor & Arte</title>
+    <link rel="stylesheet" href="../CSS/shared.css" />
+    <link rel="stylesheet" href="../CSS/Testemunhos.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="Home.html"
+          ><span class="brand-icon">🍴</span> Sabor & Arte</a
+        >
+        <div class="nav-links">
+          <a href="Home.html">Início</a>
+          <a href="Menu.html">Menu</a>
+          <a href="Galeria.html">Galeria</a>
+          <a class="active" href="Testemunhos.html">Testemunhos</a>
+          <a href="Reservas.html">Reservas</a>
+          <a href="Sobre.html">Sobre</a>
+          <a href="Contactos.html">Contactos</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="page-title">
+        <h1>O que dizem nossos clientes</h1>
+        <p>Avaliações reais de quem já experimentou nossa culinária.</p>
+        <div class="rating">★★★★★ <span>4.8 de 5.0 (6 avaliações)</span></div>
+      </section>
+
+      <section class="testimonials-grid">
+        <article>
+          <div class="person">
+            <span>MS</span>
+            <div>
+              <h3>Fernando Sebastião</h3>
+              <p>Março 2026</p>
+            </div>
+          </div>
+          <strong>★★★★★</strong>
+          <p>
+            Experiência incrível! Os pratos são deliciosos e o atendimento é
+            impecável. Voltarei com certeza.
+          </p>
+        </article>
+        <article>
+          <div class="person">
+            <span>JS</span>
+            <div>
+              <h3>Mauro Raimundo</h3>
+              <p>Março 2026</p>
+            </div>
+          </div>
+          <strong>★★★★★</strong>
+          <p>
+            Melhor restaurante da cidade. O ambiente é acolhedor e a comida é
+            simplesmente fantástica.
+          </p>
+        </article>
+        <article>
+          <div class="person">
+            <span>AR</span>
+            <div>
+              <h3>Braulio - Delas</h3>
+              <p>Fevereiro 2026</p>
+            </div>
+          </div>
+          <strong>★★★★★</strong>
+          <p>
+            Adorei cada detalhe. A pasta carbonara é a melhor que já provei.
+          </p>
+        </article>
+        <article>
+          <div class="person">
+            <span>PC</span>
+            <div>
+              <h3>Wilson MD</h3>
+              <p>Fevereiro 2026</p>
+            </div>
+          </div>
+          <strong>★★★★★</strong>
+          <p>
+            Serviço excepcional e pratos maravilhosos. Perfeito para ocasiões
+            especiais.
+          </p>
+        </article>
+        <article>
+          <div class="person">
+            <span>CM</span>
+            <div>
+              <h3>Brunson CLB</h3>
+              <p>Janeiro 2026</p>
+            </div>
+          </div>
+          <strong>★★★★☆</strong>
+          <p>
+            Ótima experiência gastronômica. Ingredientes frescos e apresentação
+            impecável.
+          </p>
+        </article>
+        <article>
+          <div class="person">
+            <span>RO</span>
+            <div>
+              <h3>Ivandro DGNRL</h3>
+              <p>Janeiro 2026</p>
+            </div>
+          </div>
+          <strong>★★★★★</strong>
+          <p>Simplesmente perfeito, desde a recepção até a sobremesa.</p>
+        </article>
+      </section>
+
+      <section class="review-cta">
+        <h2>Já visitou nosso restaurante?</h2>
+        <p>
+          Adoraríamos saber sua opinião! Compartilhe sua experiência conosco.
+        </p>
+        <a href="Contactos.html">Contato: contato@saborarte.com</a>
+      </section>
+    </main>
+
+    <section class="add-review-section" style="width: min(1100px, calc(100% - 32px)); margin: 40px auto;">
+      <h2>Deixe sua Avaliação</h2>
+      <p>Compartilhe sua experiência no Sabor & Arte com outros clientes.</p>
+      <form id="testimonial-form" class="review-form">
+        <div class="form-row">
+          <label>Seu Nome<input type="text" id="review-name" placeholder="Seu nome completo" required /></label>
+          <label>Avaliação (1 a 5 estrelas)
+            <select id="review-stars">
+              <option value="5">★★★★★ (Excelente)</option>
+              <option value="4">★★★★☆ (Muito Bom)</option>
+              <option value="3">★★★☆☆ (Bom)</option>
+              <option value="2">★★☆☆☆ (Regular)</option>
+              <option value="1">★☆☆☆☆ (Ruim)</option>
+            </select>
+          </label>
+        </div>
+        <label>Seu Comentário<textarea id="review-text" placeholder="Escreva aqui sua opinião sobre nossos pratos e atendimento..." required></textarea></label>
+        <button type="submit" class="btn primary">Submeter Avaliação</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3><span class="brand-icon">🍴</span> Sabor & Arte</h3>
+          <p>
+            Experiência gastronômica única com ingredientes frescos e receitas
+            tradicionais.
+          </p>
+        </div>
+        <div>
+          <h3>Horário de Funcionamento</h3>
+          <p>
+            Segunda - Sexta: 07:00 - 23:00<br />Sábado - Domingo: 07:00 - 20:00
+          </p>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <p>
+            Telefone: (+244) 929516315<br />Email: contato@saborarte.com<br />Rua
+            dos Sabores, 123
+          </p>
+        </div>
+        <div>
+          <h3>Siga-nos</h3>
+          <ul class="social-links">
+            <li>
+              <a href="https://facebook.com/SaboresArtes" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/SaboresArtesn" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/sabores-artes" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">
+        © 2026 Sabor & Arte. Todos os direitos reservados.
+      </p>
+    </footer>
+    <script src="../JS/testemunhos.js"></script>
+  </body>
+</html>

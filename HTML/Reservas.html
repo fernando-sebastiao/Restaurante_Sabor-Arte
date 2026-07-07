@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Reserve sua mesa online no Restaurante Sabor & Arte em Angola para almoço, jantar, encontros especiais e eventos com atendimento premium." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://saborarte.com/HTML/Reservas.html" />
+    <meta property="og:title" content="Reservas Online | Restaurante Sabor & Arte" />
+    <meta property="og:description" content="Garanta a sua mesa no Sabor & Arte para uma experiência gastronômica premium." />
+    <meta property="og:image" content="https://saborarte.com/MEDIA/hero-table.jpg" />
+    <title>Reservas Online | Restaurante Sabor & Arte</title>
+    <link rel="stylesheet" href="../CSS/shared.css" />
+    <link rel="stylesheet" href="../CSS/Reservas.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="Home.html"
+          ><span class="brand-icon">🍴</span> Sabor & Arte</a
+        >
+        <div class="nav-links">
+          <a href="Home.html">Início</a>
+          <a href="Menu.html">Menu</a>
+          <a href="Galeria.html">Galeria</a>
+          <a href="Testemunhos.html">Testemunhos</a>
+          <a class="active" href="Reservas.html">Reservas</a>
+          <a href="Sobre.html">Sobre</a>
+          <a href="Contactos.html">Contactos</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="page-title">
+        <h1>Reservas</h1>
+        <p>Reserve sua mesa e garanta uma experiência inesquecível.</p>
+      </section>
+
+      <section class="reservas-layout">
+        <div class="panel">
+          <h2>Mesas Disponíveis</h2>
+          <div class="filters">
+            <button type="button" class="chip active" data-filter="all">Todas</button>
+            <button type="button" class="chip" data-filter="2">2 pessoas</button>
+            <button type="button" class="chip" data-filter="4">4 pessoas</button>
+            <button type="button" class="chip" data-filter="6">6+ pessoas</button>
+          </div>
+          <div class="tables" id="tables-container">
+            <article class="table-card" data-capacity="2" data-table-num="1">
+              <h3>Mesa 1</h3>
+              <p>Janela</p>
+              <span>2 pessoas</span><strong>Disponível</strong>
+            </article>
+            <article class="table-card" data-capacity="2" data-table-num="2">
+              <h3>Mesa 2</h3>
+              <p>Central</p>
+              <span>2 pessoas</span><strong>Disponível</strong>
+            </article>
+            <article class="table-card" data-capacity="4" data-table-num="3">
+              <h3>Mesa 3</h3>
+              <p>Janela</p>
+              <span>4 pessoas</span><strong>Disponível</strong>
+            </article>
+            <article class="table-card reserved" data-capacity="4" data-table-num="4">
+              <h3>Mesa 4</h3>
+              <p>Central</p>
+              <span>4 pessoas</span><strong>Reservada</strong>
+            </article>
+            <article class="table-card" data-capacity="6" data-table-num="5">
+              <h3>Mesa 5</h3>
+              <p>Privado</p>
+              <span>6 pessoas</span><strong>Disponível</strong>
+            </article>
+            <article class="table-card" data-capacity="6" data-table-num="6">
+              <h3>Mesa 6</h3>
+              <p>Privado</p>
+              <span>6 pessoas</span><strong>Disponível</strong>
+            </article>
+            <article class="table-card" data-capacity="4" data-table-num="8">
+              <h3>Mesa 8</h3>
+              <p>Terraço</p>
+              <span>4 pessoas</span><strong>Disponível</strong>
+            </article>
+            <article class="table-card reserved" data-capacity="8" data-table-num="9">
+              <h3>Mesa 9</h3>
+              <p>Salão Principal</p>
+              <span>8 pessoas</span><strong>Reservada</strong>
+            </article>
+          </div>
+        </div>
+
+        <div class="reservation-side">
+          <form class="panel form-panel" id="reservas-form">
+            <h2>Dados da Reserva</h2>
+            <label
+              >Nome Completo<input type="text" id="reserva-nome" placeholder="Seu nome completo" required
+            /></label>
+            <label
+              >Email<input type="email" id="reserva-email" placeholder="seu@email.com" required
+            /></label>
+            <label>Telefone<input type="tel" id="reserva-telefone" placeholder="929516315" required /></label>
+            <div class="form-row">
+              <label>Data<input type="date" id="reserva-data" required /></label>
+              <label>Horário<input type="time" id="reserva-horario" required /></label>
+            </div>
+            <label
+              >Número de Pessoas<input type="number" id="reserva-pessoas" min="1" value="2" required
+            /></label>
+            <label
+              >Número da Mesa<input type="number" id="reserva-mesa" min="1" max="9" value="2" required
+            /></label>
+            <button type="submit" class="btn primary full" id="btn-submit-reserva">Confirmar Reserva</button>
+          </form>
+
+          <aside class="info-box">
+            <h3>Informações Importantes:</h3>
+            <p>Reservas devem ser feitas com 24h de antecedência.</p>
+            <p>Tolerância de 15 minutos após o horário reservado.</p>
+            <p>Cancelamentos devem ser feitos com 12h de antecedência.</p>
+            <p>Entre em contato para grupos acima de 8 pessoas.</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal de Sucesso de Reserva -->
+    <div class="modal-overlay" id="reserva-modal">
+      <div class="modal-content">
+        <div class="modal-icon">✓</div>
+        <h2>Reserva Confirmada!</h2>
+        <p>A sua mesa foi reservada com sucesso. Apresente os seus dados à chegada no restaurante Sabor & Arte.</p>
+        <div class="modal-details" id="modal-details-content">
+          <!-- Preenchido por JavaScript -->
+        </div>
+        <button type="button" class="btn primary" id="modal-close-btn">Fechar</button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3><span class="brand-icon">🍴</span> Sabor & Arte</h3>
+          <p>
+            Experiência gastronômica única com ingredientes frescos e receitas
+            tradicionais.
+          </p>
+        </div>
+        <div>
+          <h3>Horário de Funcionamento</h3>
+          <p>
+            Segunda - Sexta: 07:00 - 23:00<br />Sábado - Domingo: 07:00 - 20:00
+          </p>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <p>
+            Telefone: (+244) 929516315<br />Email: contato@saborarte.com<br />Rua
+            dos Sabores, 123
+          </p>
+        </div>
+        <div>
+          <h3>Siga-nos</h3>
+          <ul class="social-links">
+            <li>
+              <a href="https://facebook.com/SaboresArtes" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/SaboresArtesn" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/sabores-artes" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">
+        © 2026 Sabor & Arte. Todos os direitos reservados.
+      </p>
+    </footer>
+    <script src="../JS/reservas.js"></script>
+  </body>
+</html>

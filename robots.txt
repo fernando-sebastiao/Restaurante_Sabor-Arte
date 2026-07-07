@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /HTML/NotFound.html
+
+Sitemap: https://saborarte.com/sitemap.xml

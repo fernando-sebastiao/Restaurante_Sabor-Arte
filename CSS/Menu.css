@@ -1,0 +1,168 @@
+.menu-toolbar {
+  display: grid;
+  grid-template-columns: minmax(260px, 1fr) auto;
+  align-items: end;
+  gap: 18px;
+  margin: 0 0 34px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.menu-search span {
+  color: var(--muted);
+}
+
+.menu-search input {
+  background: var(--soft);
+}
+
+.menu-filters {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--orange);
+  background: var(--orange);
+  color: var(--white);
+}
+
+.menu-empty {
+  margin: 22px 0;
+  padding: 18px;
+  border-radius: 8px;
+  text-align: center;
+  background: var(--cream);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.menu-section {
+  margin-top: 44px;
+}
+
+.menu-section h2 {
+  margin: 0 0 24px;
+  color: var(--gold);
+  font-size: 30px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.menu-grid.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 720px;
+}
+
+.dish-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.dish-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(23, 20, 18, .12);
+}
+
+.dish-card img {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 7px 10px;
+  border-radius: 4px;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dish-body {
+  padding: 24px;
+}
+
+.dish-body h3 {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 0 0 24px;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.dish-body h3 span {
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.dish-body p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .menu-toolbar {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-filters {
+    justify-content: flex-start;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .menu-grid,
+  .menu-grid.compact {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .menu-toolbar {
+    padding: 14px;
+  }
+
+  .filter-btn {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .dish-body h3 {
+    display: grid;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore o menu completo do Restaurante Sabor & Arte em Angola: entradas, pratos principais, bebidas, cocktails e sobremesas premium com preços em kwanzas." />
+    <meta name="keywords" content="restaurante em Angola, menu restaurante, Sabor e Arte, pratos premium, bebidas, sobremesas, reservas online, Luanda" />
+    <meta name="author" content="Restaurante Sabor & Arte" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://saborarte.com/HTML/Menu.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_AO" />
+    <meta property="og:title" content="Menu Completo | Restaurante Sabor & Arte" />
+    <meta property="og:description" content="Mais de 50 especialidades entre entradas, pratos principais, bebidas e sobremesas para descobrir no Sabor & Arte." />
+    <meta property="og:image" content="https://saborarte.com/MEDIA/picanha.jpg" />
+    <meta property="og:url" content="https://saborarte.com/HTML/Menu.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Menu Completo | Restaurante Sabor & Arte</title>
+    <link rel="stylesheet" href="../CSS/shared.css" />
+    <link rel="stylesheet" href="../CSS/Menu.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Menu",
+        "name": "Menu Completo do Restaurante Sabor & Arte",
+        "url": "https://saborarte.com/HTML/Menu.html",
+        "description": "Menu com 55 especialidades entre entradas, pratos principais, bebidas, cocktails e sobremesas.",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Entradas",
+            "description": "Entradas frescas, sopas, saladas, croquetes, bruschettas e opções de partilha."
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Pratos Principais",
+            "description": "Pratos premium de carnes, peixes, massas, risotos, mariscos e opções internacionais."
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Bebidas & Cocktails",
+            "description": "Bebidas naturais, cafés, vinhos, cocktails clássicos, cocktails assinatura e mocktails."
+          },
+          {
+            "@type": "MenuSection",
+            "name": "Sobremesas",
+            "description": "Sobremesas artesanais, bolos, mousses, gelados, doces italianos e clássicos internacionais."
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="Home.html"
+          ><span class="brand-icon">🍴</span> Sabor & Arte</a
+        >
+        <div class="nav-links">
+          <a href="Home.html">Início</a>
+          <a class="active" href="Menu.html">Menu</a>
+          <a href="Galeria.html">Galeria</a>
+          <a href="Testemunhos.html">Testemunhos</a>
+          <a href="Reservas.html">Reservas</a>
+          <a href="Sobre.html">Sobre</a>
+          <a href="Contactos.html">Contactos</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="page-title">
+        <h1>Menu Completo</h1>
+        <p>Descubra o nosso catálogo de 55 especialidades premium preparadas pelos nossos chefs.</p>
+      </section>
+
+      <section class="menu-toolbar" aria-label="Filtros do menu">
+        <label class="menu-search">
+          <span>Pesquisar prato</span>
+          <input type="search" id="menu-search" placeholder="Ex: picanha, tiramisu, camarão..." />
+        </label>
+        <div class="menu-filters">
+          <button type="button" class="filter-btn active" data-menu-filter="all">Todos</button>
+          <button type="button" class="filter-btn" data-menu-filter="entradas">Entradas</button>
+          <button type="button" class="filter-btn" data-menu-filter="principais">Principais</button>
+          <button type="button" class="filter-btn" data-menu-filter="bebidas">Bebidas</button>
+          <button type="button" class="filter-btn" data-menu-filter="sobremesas">Sobremesas</button>
+        </div>
+      </section>
+
+      <p class="menu-empty" id="menu-empty" hidden>Nenhum prato encontrado com estes filtros.</p>
+
+      <!-- ENTRADAS -->
+      <section class="menu-section" data-category="entradas">
+        <h2>Entradas</h2>
+        <div class="menu-grid">
+          <article class="dish-card">
+            <img src="../MEDIA/bruschetta.jpg" alt="Bruschetta de tomate tradicional" />
+            <span class="badge">Mais Vendido</span>
+            <div class="dish-body">
+              <h3>Bruschetta Tradicional <span>9.500kz</span></h3>
+              <p>Pão rústico crocante com tomates frescos picados, alho, manjericão e azeite extra virgem.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/salada-caesar.jpg" alt="Salada Caesar premium" />
+            <div class="dish-body">
+              <h3>Salada Caesar Premium <span>12.000kz</span></h3>
+              <p>Mix de folhas verdes frescas, croutons artesanais, lascas de parmesão e molho caesar caseiro.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/camarao-alho.jpg" alt="Camarão Alho e Óleo" />
+            <span class="badge">Especial</span>
+            <div class="dish-body">
+              <h3>Camarão Alho e Óleo <span>16.500kz</span></h3>
+              <p>Camarões salteados em azeite aromatizado, alho laminado, piripíri e coentros frescos.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/carpaccio.jpg" alt="Carpaccio de Novilho" />
+            <div class="dish-body">
+              <h3>Carpaccio de Novilho <span>14.000kz</span></h3>
+              <p>Finas fatias de lombo de boi, rúcula selvagem, alcaparras, raspas de parmesão e molho especial.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/creme-tomate.jpg" alt="Creme de Tomate Rústico" />
+            <div class="dish-body">
+              <h3>Creme de Tomate Rústico <span>8.000kz</span></h3>
+              <p>Sopa cremosa de tomate assado com manjericão fresco e um fio de azeite trufado.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/croquetes.jpg" alt="Croquetes de Alheira" />
+            <div class="dish-body">
+              <h3>Croquetes de Alheira <span>10.500kz</span></h3>
+              <p>Croquetes crocantes de alheira regional servidos com maionese caseira de alho e ervas.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PRATOS PRINCIPAIS -->
+      <section class="menu-section" data-category="principais">
+        <h2>Pratos Principais</h2>
+        <div class="menu-grid">
+          <article class="dish-card">
+            <img src="../MEDIA/carbonara.jpg" alt="Pasta carbonara artesanal" />
+            <span class="badge">Especial do Dia</span>
+            <div class="dish-body">
+              <h3>Pasta Carbonara Artesanal <span>30.000kz</span></h3>
+              <p>Massa fresca com molho cremoso, guanciale crocante, gema de ovo e pecorino romano.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/salmao-grelhado.jpg" alt="Salmão grelhado com legumes" />
+            <span class="badge">Especial do Dia</span>
+            <div class="dish-body">
+              <h3>Salmão Grelhado <span>28.000kz</span></h3>
+              <p>Salmão fresco grelhado acompanhado de vegetais da estação glaceados no azeite.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/bife-angus.jpg" alt="Bife angus com batatas" />
+            <div class="dish-body">
+              <h3>Bife Angus com Batatas <span>40.000kz</span></h3>
+              <p>Bife angus maturado grelhado com batatas rústicas alecrim e molho de pimenta verde.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/risotto.jpg" alt="Risoto de cogumelos porcini selvagens" />
+            <div class="dish-body">
+              <h3>Risoto de Cogumelos <span>32.000kz</span></h3>
+              <p>Risoto cremoso com cogumelos porcini selvagens frescos, parmesão e salsa.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/picanha.jpg" alt="Picanha grelhada premium" />
+            <span class="badge">Especial do Dia</span>
+            <div class="dish-body">
+              <h3>Picanha Grelhada Premium <span>38.000kz</span></h3>
+              <p>Fatias suculentas de picanha grelhada acompanhadas de arroz e feijão preto gourmet.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/frango-ervas.jpg" alt="Peito de frango grelhado com ervas" />
+            <div class="dish-body">
+              <h3>Frango com Ervas Finas <span>24.000kz</span></h3>
+              <p>Peito de frango suculento grelhado com ervas finas e puré de batata trufado.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/bacalhau.jpg" alt="Bacalhau à Lagareiro" />
+            <span class="badge">Assinatura</span>
+            <div class="dish-body">
+              <h3>Bacalhau à Lagareiro <span>36.000kz</span></h3>
+              <p>Lombo de bacalhau assado, batatas a murro, cebola, alho confitado e bastante azeite.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/hamburguer.jpg" alt="Hambúrguer Gourmet" />
+            <div class="dish-body">
+              <h3>Hambúrguer Sabor & Arte <span>18.500kz</span></h3>
+              <p>Blend de carne selecionada, queijo cheddar derretido, cebola caramelizada e batatas fritas.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/costelinha-bbq.jpg" alt="Costelinha de Porco Barbecue" />
+            <div class="dish-body">
+              <h3>Costelinha de Porco BBQ <span>34.000kz</span></h3>
+              <p>Costelinha assada lentamente com molho barbecue caseiro e espiga de milho grelhada.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/caril-lagosta.jpg" alt="Caril de Lagosta" />
+            <span class="badge">Novo</span>
+            <div class="dish-body">
+              <h3>Caril de Lagosta e Coco <span>48.000kz</span></h3>
+              <p>Cauda de lagosta em molho cremoso de caril e leite de coco, com arroz basmati.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/polvo-grelhado.jpg" alt="Polvo grelhado com batata doce e azeite de ervas" />
+            <span class="badge">Chef</span>
+            <div class="dish-body">
+              <h3>Polvo Grelhado <span>42.000kz</span></h3>
+              <p>Polvo macio finalizado na brasa, batata doce assada, legumes crocantes e azeite de ervas.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/sushi-premium.jpg" alt="Seleção de sushi premium" />
+            <div class="dish-body">
+              <h3>Sushi Premium <span>35.000kz</span></h3>
+              <p>Combinado de peças frescas com salmão, atum, camarão, arroz temperado e molho ponzu.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/pizza-trufada.jpg" alt="Pizza artesanal trufada" />
+            <span class="badge">Novo</span>
+            <div class="dish-body">
+              <h3>Pizza Trufada <span>26.000kz</span></h3>
+              <p>Massa artesanal, mozzarella fresca, cogumelos, rúcula e azeite trufado.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/ramen-artesanal.jpg" alt="Ramen artesanal com caldo intenso" />
+            <div class="dish-body">
+              <h3>Ramen Artesanal <span>27.500kz</span></h3>
+              <p>Caldo aromático, noodles, ovo cremoso, legumes frescos e carne lentamente cozida.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/tacos-camarao.jpg" alt="Tacos de camarão com molho cítrico" />
+            <div class="dish-body">
+              <h3>Tacos de Camarão <span>22.000kz</span></h3>
+              <p>Tortilhas macias com camarão salteado, pico de gallo, abacate e molho cítrico.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/pato-laranja.jpg" alt="Pato ao molho de laranja" />
+            <span class="badge">Assinatura</span>
+            <div class="dish-body">
+              <h3>Pato à Laranja <span>39.500kz</span></h3>
+              <p>Peito de pato suculento com redução de laranja, puré de mandioquinha e legumes.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/lasanha-bolonhesa.jpg" alt="Lasanha bolonhesa gratinada" />
+            <div class="dish-body">
+              <h3>Lasanha Bolonhesa <span>25.000kz</span></h3>
+              <p>Camadas de massa fresca, ragu de carne, molho bechamel e queijo gratinado.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/gnocchi-pesto.jpg" alt="Gnocchi ao pesto fresco" />
+            <div class="dish-body">
+              <h3>Gnocchi ao Pesto <span>24.500kz</span></h3>
+              <p>Gnocchi artesanal envolvido em pesto de manjericão, castanhas e parmesão.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/atum-selado.jpg" alt="Atum selado com crosta de gergelim" />
+            <div class="dish-body">
+              <h3>Atum Selado <span>37.000kz</span></h3>
+              <p>Atum fresco com crosta de gergelim, legumes salteados e molho agridoce de soja.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/cordeiro-alecrim.jpg" alt="Cordeiro ao alecrim com batatas rústicas" />
+            <span class="badge">Premium</span>
+            <div class="dish-body">
+              <h3>Cordeiro ao Alecrim <span>44.000kz</span></h3>
+              <p>Cordeiro assado lentamente com alecrim, molho de vinho tinto e batatas rústicas.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- BEBIDAS & COCKTAILS -->
+      <section class="menu-section" data-category="bebidas">
+        <h2>Bebidas & Cocktails</h2>
+        <div class="menu-grid">
+          <article class="dish-card">
+            <img src="../MEDIA/limonada-lavanda.jpg" alt="Limonada Gourmet de Lavanda" />
+            <div class="dish-body">
+              <h3>Limonada de Lavanda <span>4.500kz</span></h3>
+              <p>Limonada espremida na hora com infusão natural de lavanda e um toque de hortelã fresco.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/sangria.jpg" alt="Sangria de Frutos Vermelhos" />
+            <span class="badge">Partilha</span>
+            <div class="dish-body">
+              <h3>Sangria Frutos Vermelhos <span>9.000kz</span></h3>
+              <p>Sangria refrescante de vinho tinto premium com frutos vermelhos e especiarias.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/gin-tonico.jpg" alt="Gin Tónico Premium" />
+            <div class="dish-body">
+              <h3>Gin Tónico Premium <span>7.500kz</span></h3>
+              <p>Gin artesanal nacional, água tónica premium, bagas de zimbro e limão desidratado.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/cocktail-sabor.jpg" alt="Cocktail Sabor & Arte" />
+            <span class="badge">Assinatura</span>
+            <div class="dish-body">
+              <h3>Cocktail Sabor & Arte <span>8.500kz</span></h3>
+              <p>Cocktail de maracujá, rum envelhecido angolano, folhas de hortelã e água com gás.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/espresso.jpg" alt="Café espresso intenso" />
+            <div class="dish-body">
+              <h3>Espresso Intenso <span>2.500kz</span></h3>
+              <p>Café curto, aromático e encorpado, preparado com grãos selecionados.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/cappuccino.jpg" alt="Cappuccino cremoso" />
+            <div class="dish-body">
+              <h3>Cappuccino Cremoso <span>3.800kz</span></h3>
+              <p>Espresso, leite vaporizado e espuma delicada com finalização de cacau.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/cha-gelado.jpg" alt="Chá gelado artesanal" />
+            <div class="dish-body">
+              <h3>Chá Gelado Artesanal <span>4.200kz</span></h3>
+              <p>Infusão fria de chá preto com limão, hortelã e leve toque de mel.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/smoothie-manga.jpg" alt="Smoothie de manga tropical" />
+            <span class="badge">Natural</span>
+            <div class="dish-body">
+              <h3>Smoothie de Manga <span>5.500kz</span></h3>
+              <p>Manga fresca batida com iogurte natural, gelo e raspa de lima.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/sumo-laranja.jpg" alt="Sumo natural de laranja" />
+            <div class="dish-body">
+              <h3>Sumo Natural de Laranja <span>4.000kz</span></h3>
+              <p>Laranjas espremidas na hora, servido fresco e sem conservantes.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/mojito.jpg" alt="Mojito clássico com hortelã" />
+            <div class="dish-body">
+              <h3>Mojito Clássico <span>8.000kz</span></h3>
+              <p>Rum branco, lima, hortelã fresca, açúcar mascavo e água com gás.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/margarita.jpg" alt="Margarita cítrica" />
+            <span class="badge">Cocktail</span>
+            <div class="dish-body">
+              <h3>Margarita Cítrica <span>8.500kz</span></h3>
+              <p>Tequila, triple sec, lima fresca e borda de sal para uma nota clássica.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/vinho-tinto.jpg" alt="Taça de vinho tinto premium" />
+            <div class="dish-body">
+              <h3>Vinho Tinto Premium <span>12.000kz</span></h3>
+              <p>Taça de vinho tinto encorpado, ideal para carnes e pratos intensos.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/agua-saborizada.jpg" alt="Água saborizada com frutas" />
+            <div class="dish-body">
+              <h3>Água Saborizada <span>3.500kz</span></h3>
+              <p>Água fresca com rodelas de citrinos, frutos vermelhos e ervas aromáticas.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/mocktail-frutos.jpg" alt="Mocktail de frutos vermelhos" />
+            <span class="badge">Sem Álcool</span>
+            <div class="dish-body">
+              <h3>Mocktail de Frutos <span>6.500kz</span></h3>
+              <p>Frutos vermelhos, lima, hortelã e soda para uma bebida leve e elegante.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SOBREMESAS -->
+      <section class="menu-section" data-category="sobremesas">
+        <h2>Sobremesas</h2>
+        <div class="menu-grid">
+          <article class="dish-card">
+            <img src="../MEDIA/petit-gateau.jpg" alt="Petit gâteau de chocolate" />
+            <div class="dish-body">
+              <h3>Petit Gâteau Premium <span>15.000kz</span></h3>
+              <p>Bolo clássico de chocolate com recheio cremoso quente e gelado artesanal de baunilha.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/tiramisu.jpg" alt="Tiramisu italiano artesanal" />
+            <span class="badge">Mais Vendido</span>
+            <div class="dish-body">
+              <h3>Tiramisu Italiano <span>13.000kz</span></h3>
+              <p>Sobremesa clássica italiana com queijo mascarpone cremoso, biscoitos e café expresso.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/mousse-chocolate.jpg" alt="Mousse de Chocolate Belga" />
+            <div class="dish-body">
+              <h3>Mousse de Chocolate <span>11.000kz</span></h3>
+              <p>Mousse aerada de chocolate belga meio amargo finalizada com finas raspas de laranja.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/cheesecake.jpg" alt="Cheesecake de Frutos Vermelhos" />
+            <div class="dish-body">
+              <h3>Cheesecake Vermelhos <span>12.500kz</span></h3>
+              <p>Cheesecake cremoso assado com calda rústica caseira de morango, amora e framboesa.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/pudim.jpg" alt="Pudim de Leite Condensado" />
+            <span class="badge">Tradicional</span>
+            <div class="dish-body">
+              <h3>Pudim de Leite <span>9.000kz</span></h3>
+              <p>Pudim tradicional super cremoso cozido lentamente com calda de caramelo dourado.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/creme-brulee.jpg" alt="Crème brûlée com açúcar caramelizado" />
+            <span class="badge">Francês</span>
+            <div class="dish-body">
+              <h3>Crème Brûlée <span>14.000kz</span></h3>
+              <p>Creme de baunilha sedoso com fina camada de açúcar caramelizado no momento.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/pavlova.jpg" alt="Pavlova com frutas frescas" />
+            <div class="dish-body">
+              <h3>Pavlova Tropical <span>12.500kz</span></h3>
+              <p>Merengue crocante, creme leve e frutas tropicais frescas da estação.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/macarons.jpg" alt="Macarons coloridos artesanais" />
+            <div class="dish-body">
+              <h3>Macarons Artesanais <span>10.000kz</span></h3>
+              <p>Seleção de macarons delicados com recheios de chocolate, baunilha e frutos vermelhos.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/gelado-artesanal.jpg" alt="Gelado artesanal servido em taça" />
+            <div class="dish-body">
+              <h3>Gelado Artesanal <span>8.500kz</span></h3>
+              <p>Três bolas de gelado caseiro com sabores sazonais e calda quente.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/brownie.jpg" alt="Brownie de chocolate com noz" />
+            <span class="badge">Chocolate</span>
+            <div class="dish-body">
+              <h3>Brownie com Noz <span>9.500kz</span></h3>
+              <p>Brownie denso de chocolate com nozes, servido morno com creme inglês.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/panna-cotta.jpg" alt="Panna cotta com calda de frutos vermelhos" />
+            <div class="dish-body">
+              <h3>Panna Cotta <span>11.500kz</span></h3>
+              <p>Sobremesa italiana cremosa com baunilha e calda artesanal de frutos vermelhos.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/bolo-red-velvet.jpg" alt="Bolo red velvet em camadas" />
+            <div class="dish-body">
+              <h3>Bolo Red Velvet <span>13.500kz</span></h3>
+              <p>Camadas macias de bolo vermelho com creme de queijo e toque de baunilha.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/waffles.jpg" alt="Waffles com frutas e mel" />
+            <div class="dish-body">
+              <h3>Waffles Dourados <span>10.500kz</span></h3>
+              <p>Waffles crocantes com frutas frescas, mel, chantilly e açúcar em pó.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/mousse-maracuja.jpg" alt="Mousse de maracujá tropical" />
+            <span class="badge">Tropical</span>
+            <div class="dish-body">
+              <h3>Mousse de Maracujá <span>9.500kz</span></h3>
+              <p>Mousse leve de maracujá com coulis ácido e crocante de castanhas.</p>
+            </div>
+          </article>
+          <article class="dish-card">
+            <img src="../MEDIA/torta-limao.jpg" alt="Torta de limão com merengue" />
+            <div class="dish-body">
+              <h3>Torta de Limão <span>10.000kz</span></h3>
+              <p>Base crocante, creme cítrico de limão e merengue tostado delicadamente.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3><span class="brand-icon">🍴</span> Sabor & Arte</h3>
+          <p>
+            Experiência gastronômica única com ingredientes frescos e receitas
+            tradicionais.
+          </p>
+        </div>
+        <div>
+          <h3>Horário de Funcionamento</h3>
+          <p>
+            Segunda - Sexta: 07:00 - 23:00<br />Sábado - Domingo: 07:00 - 20:00
+          </p>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <p>
+            Telefone: (+244) 929516315<br />Email: contato@saborarte.com<br />Rua
+            dos Sabores, 123
+          </p>
+        </div>
+        <div>
+          <h3>Siga-nos</h3>
+          <ul class="social-links">
+            <li>
+              <a href="https://facebook.com/SaboresArtes" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/SaboresArtesn" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/sabores-artes" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">
+        © 2026 Sabor & Arte. Todos os direitos reservados.
+      </p>
+    </footer>
+    <script src="../JS/Menu.js"></script>
+  </body>
+</html>

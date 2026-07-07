@@ -1,0 +1,46 @@
+.landing {
+  min-height: 100vh;
+  background: url("../MEDIA/landing-restaurant.jpg") center/cover no-repeat;
+}
+
+.landing-overlay {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  padding: 34px min(7vw, 96px);
+  background: linear-gradient(90deg, rgba(15, 12, 9, .82), rgba(15, 12, 9, .38));
+  color: var(--white);
+}
+
+.brand-light {
+  width: max-content;
+}
+
+.landing-content {
+  align-self: center;
+  width: min(720px, 100%);
+  padding-bottom: 8vh;
+}
+
+.eyebrow {
+  color: #ffd68f;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.landing h1 {
+  margin: 12px 0 18px;
+  font-size: clamp(44px, 8vw, 86px);
+  line-height: .98;
+}
+
+.landing p {
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.landing .actions {
+  justify-content: flex-start;
+  margin-top: 28px;
+}

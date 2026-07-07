@@ -1,0 +1,152 @@
+.rating {
+  margin-top: 26px;
+  color: #ffad00;
+  font-size: 24px;
+}
+
+.rating span {
+  color: var(--ink);
+  font-size: 18px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonials-grid article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+  background: var(--white);
+}
+
+.person {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.person span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: var(--gold);
+  background: var(--cream);
+  font-size: 14px;
+}
+
+.person h3,
+.person p {
+  margin: 0;
+}
+
+.person p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.testimonials-grid strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #ffad00;
+}
+
+.testimonials-grid article > p {
+  margin: 0;
+  color: #3f3b37;
+  line-height: 1.6;
+}
+
+.review-cta {
+  margin-top: 44px;
+  padding: 34px;
+  border-radius: 8px;
+  text-align: center;
+  color: var(--white);
+  background: linear-gradient(90deg, var(--orange), var(--orange-dark));
+}
+
+.review-cta h2 {
+  margin: 0 0 16px;
+  font-size: 30px;
+}
+
+.review-cta p {
+  margin: 0 0 20px;
+}
+
+@media (max-width: 900px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.add-review-section {
+  padding: 34px;
+  border-radius: 8px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.add-review-section h2 {
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.add-review-section p {
+  margin: 0 0 24px;
+  color: var(--muted);
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-form .form-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+}
+
+.review-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  background: var(--white);
+  color: var(--ink);
+}
+
+.review-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.review-form button {
+  align-self: flex-start;
+}
+
+@media (max-width: 600px) {
+  .review-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
