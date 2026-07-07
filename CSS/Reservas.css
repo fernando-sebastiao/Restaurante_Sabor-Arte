@@ -9,7 +9,7 @@
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 24px;
-  background: var(--white);
+  background: var(--surface);
 }
 
 .panel h2 {
@@ -67,8 +67,8 @@
   margin-top: 10px;
   padding: 6px 10px;
   border-radius: 5px;
-  color: #16864a;
-  background: #ddf8e9;
+  color: var(--success);
+  background: var(--success-bg);
   font-size: 12px;
 }
 
@@ -77,8 +77,8 @@
 }
 
 .tables .reserved strong {
-  color: #b35050;
-  background: #ffe5e5;
+  color: var(--danger);
+  background: var(--danger-bg);
 }
 
 .reservation-side {
@@ -100,8 +100,8 @@
 .info-box {
   padding: 24px;
   border-radius: 4px;
-  background: #eef7ff;
-  color: #363a3d;
+  background: var(--info-bg);
+  color: var(--info-text);
 }
 
 .info-box h3 {
@@ -122,7 +122,7 @@
 
 .chip {
   cursor: pointer;
-  background: var(--white);
+  background: var(--surface);
   transition: all 0.2s ease;
   font-family: inherit;
   outline: none;
@@ -139,14 +139,14 @@
 
 .tables article:not(.reserved):hover {
   border-color: var(--orange);
-  box-shadow: 0 4px 12px rgba(220, 114, 53, 0.1);
+  box-shadow: 0 4px 12px var(--shadow);
   transform: translateY(-2px);
 }
 
 .tables article.selected {
   border-color: var(--orange);
-  background: #fff8f5;
-  box-shadow: 0 4px 12px rgba(220, 114, 53, 0.15);
+  background: var(--accent-soft);
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
 /* Estilos do Modal de Sucesso */
@@ -172,7 +172,7 @@
 }
 
 .modal-content {
-  background: var(--white);
+  background: var(--surface);
   padding: 40px;
   border-radius: 12px;
   width: min(500px, calc(100% - 32px));
@@ -191,9 +191,9 @@
   height: 60px;
   line-height: 60px;
   border-radius: 50%;
-  background: #ddf8e9;
+  background: var(--success-bg);
   font-size: 32px;
-  color: #16864a;
+  color: var(--success);
   margin: 0 auto 20px;
   text-align: center;
   font-weight: bold;
@@ -212,7 +212,7 @@
 }
 
 .modal-details {
-  background: #f8f6f4;
+  background: var(--surface-soft);
   padding: 18px;
   border-radius: 8px;
   margin-bottom: 24px;
@@ -231,7 +231,7 @@
 .modal-details p {
   margin: 6px 0;
   font-size: 13px;
-  color: #3f3b37;
+  color: var(--muted);
 }
 
 .modal-details strong {

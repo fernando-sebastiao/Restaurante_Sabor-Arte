@@ -19,7 +19,7 @@
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 24px;
-  background: var(--white);
+  background: var(--surface);
 }
 
 .person {
@@ -36,7 +36,7 @@
   height: 42px;
   border-radius: 50%;
   color: var(--gold);
-  background: var(--cream);
+  background: var(--accent-soft);
   font-size: 14px;
 }
 
@@ -58,7 +58,7 @@
 
 .testimonials-grid article > p {
   margin: 0;
-  color: #3f3b37;
+  color: var(--muted);
   line-height: 1.6;
 }
 
@@ -89,7 +89,7 @@
 .add-review-section {
   padding: 34px;
   border-radius: 8px;
-  background: var(--white);
+  background: var(--surface);
   border: 1px solid var(--line);
 }
 
@@ -132,7 +132,7 @@
   border-radius: 4px;
   font-family: inherit;
   font-size: 14px;
-  background: var(--white);
+  background: var(--field);
   color: var(--ink);
 }
 

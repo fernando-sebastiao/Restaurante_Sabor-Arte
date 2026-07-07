@@ -43,7 +43,7 @@
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: var(--white);
+  background: var(--surface);
 }
 
 .values h3 {
