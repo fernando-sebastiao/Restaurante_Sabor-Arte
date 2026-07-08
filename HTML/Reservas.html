@@ -118,8 +118,11 @@
               >Número de Pessoas<input type="number" id="reserva-pessoas" min="1" value="2" required
             /></label>
             <label
-              >Número da Mesa<input type="number" id="reserva-mesa" min="1" max="9" value="2" required
-            /></label>
+              >Número da Mesa
+              <select id="reserva-mesa" required>
+                <option value="" disabled selected>Selecione uma mesa</option>
+              </select>
+            </label>
             <button type="submit" class="btn primary full" id="btn-submit-reserva">Confirmar Reserva</button>
           </form>
 

@@ -6,6 +6,59 @@ document.addEventListener("DOMContentLoaded", () => {
   const pessoasInput = document.getElementById("reserva-pessoas");
   const form = document.getElementById("reservas-form");
 
+  // Função para atualizar as opções do select de mesa com base no filtro ativo e na disponibilidade
+  function updateMesaSelectOptions() {
+    if (!mesaInput) return;
+
+    const activeChip = document.querySelector(".filters .chip.active");
+    const filterValue = activeChip ? activeChip.getAttribute("data-filter") : "all";
+    const currentSelectedValue = mesaInput.value;
+
+    mesaInput.innerHTML = '<option value="" disabled selected>Selecione uma mesa</option>';
+
+    let selectedOptionExists = false;
+
+    tables.forEach(table => {
+      // Apenas mesas que NÃO estão reservadas (disponíveis)
+      if (!table.classList.contains("reserved")) {
+        const tableNum = table.getAttribute("data-table-num");
+        const capacity = parseInt(table.getAttribute("data-capacity"), 10);
+
+        // Verifica se corresponde ao filtro ativo
+        let matchesFilter = false;
+        if (filterValue === "all") {
+          matchesFilter = true;
+        } else if (filterValue === "2") {
+          matchesFilter = (capacity === 2);
+        } else if (filterValue === "4") {
+          matchesFilter = (capacity === 4);
+        } else if (filterValue === "6") {
+          matchesFilter = (capacity >= 6);
+        }
+
+        if (matchesFilter) {
+          const opt = document.createElement("option");
+          opt.value = tableNum;
+          opt.textContent = `Mesa ${tableNum} (${capacity} pessoas)`;
+          mesaInput.appendChild(opt);
+
+          if (tableNum === currentSelectedValue) {
+            selectedOptionExists = true;
+          }
+        }
+      }
+    });
+
+    if (selectedOptionExists) {
+      mesaInput.value = currentSelectedValue;
+    } else {
+      mesaInput.value = "";
+    }
+  }
+
+  // Inicializar as opções do select ao carregar a página
+  updateMesaSelectOptions();
+
   chips.forEach(chip => {
     chip.addEventListener("click", () => {
       // Mudar chip ativo
@@ -27,6 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
           table.style.display = (capacity >= 6) ? "block" : "none";
         }
       });
+
+      // Atualizar o dropdown de mesas de acordo com o filtro
+      updateMesaSelectOptions();
     });
   });
 
@@ -52,6 +108,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Sincronizar o dropdown com a seleção visual de mesas
+  if (mesaInput) {
+    mesaInput.addEventListener("change", () => {
+      const tableNum = mesaInput.value;
+      tables.forEach(t => t.classList.remove("selected"));
+
+      const selectedTable = document.querySelector(`.tables .table-card[data-table-num="${tableNum}"]`);
+      if (selectedTable) {
+        selectedTable.classList.add("selected");
+        const capacity = selectedTable.getAttribute("data-capacity");
+        if (pessoasInput) pessoasInput.value = capacity;
+      }
+    });
+  }
+
   // 3. Validação do Formulário e Modal de Sucesso
   const modal = document.getElementById("reserva-modal");
   const modalCloseBtn = document.getElementById("modal-close-btn");
@@ -63,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Limpar erros anteriores
       document.querySelectorAll(".error-msg").forEach(el => el.remove());
-      const inputs = form.querySelectorAll("input");
+      const inputs = form.querySelectorAll("input, select");
       inputs.forEach(i => i.style.borderColor = "");
 
       let hasErrors = false;
@@ -110,23 +181,28 @@ document.addEventListener("DOMContentLoaded", () => {
         hasErrors = true;
       }
 
-      // Verificar se a mesa escolhida no input está disponível na lista física
-      let mesaDisponivel = true;
-      tables.forEach(t => {
-        const num = parseInt(t.getAttribute("data-table-num"), 10);
-        if (num === mesaVal && t.classList.contains("reserved")) {
-          mesaDisponivel = false;
+      // Validação da Mesa
+      if (isNaN(mesaVal)) {
+        showError(mesaInput, "Por favor, selecione uma mesa.");
+        hasErrors = true;
+      } else {
+        let mesaDisponivel = true;
+        tables.forEach(t => {
+          const num = parseInt(t.getAttribute("data-table-num"), 10);
+          if (num === mesaVal && t.classList.contains("reserved")) {
+            mesaDisponivel = false;
+          }
+        });
+
+        if (!mesaDisponivel) {
+          showError(mesaInput, "A mesa inserida já está reservada.");
+          hasErrors = true;
         }
-      });
 
-      if (!mesaDisponivel) {
-        showError(mesaInput, "A mesa inserida já está reservada.");
-        hasErrors = true;
-      }
-
-      if (mesaVal < 1 || mesaVal > 9) {
-        showError(mesaInput, "Mesa inválida (selecione de 1 a 9).");
-        hasErrors = true;
+        if (mesaVal < 1 || mesaVal > 9) {
+          showError(mesaInput, "Mesa inválida.");
+          hasErrors = true;
+        }
       }
 
       if (!hasErrors) {
@@ -141,6 +217,22 @@ document.addEventListener("DOMContentLoaded", () => {
           <p><strong>Data & Horário:</strong> ${dataFormatada} às ${horaVal}</p>
           <p><strong>E-mail de Confirmação enviado para:</strong> ${emailVal}</p>
         `;
+
+        // Marcar a mesa selecionada como reservada (ocupada)
+        tables.forEach(table => {
+          const num = parseInt(table.getAttribute("data-table-num"), 10);
+          if (num === mesaVal) {
+            table.classList.add("reserved");
+            table.classList.remove("selected");
+            const statusElement = table.querySelector("strong");
+            if (statusElement) {
+              statusElement.textContent = "Reservada";
+            }
+          }
+        });
+
+        // Atualizar as opções do select de mesas para remover a mesa recém-reservada
+        updateMesaSelectOptions();
 
         // Abrir modal
         modal.classList.add("active");
