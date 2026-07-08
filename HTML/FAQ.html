@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tire suas dúvidas sobre o Restaurante Sabor & Arte. Informações sobre reservas, menu, funcionamento, métodos de pagamento e eventos privados." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://saborarte.com/HTML/FAQ.html" />
+    <meta property="og:title" content="FAQ | Perguntas Frequentes | Restaurante Sabor & Arte" />
+    <meta property="og:description" content="Esclareça suas dúvidas sobre reservas, pratos especiais e eventos no Sabor & Arte." />
+    <meta property="og:image" content="https://saborarte.com/MEDIA/hero-dining.jpg" />
+    <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DM1Q44YYBW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DM1Q44YYBW');
+    </script>
+    <title>Perguntas Frequentes (FAQ) | Restaurante Sabor & Arte</title>
+    <link rel="stylesheet" href="../CSS/shared.css" />
+    <link rel="stylesheet" href="../CSS/FAQ.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="../index.html"
+          ><span class="brand-icon">🍴</span> Sabor & Arte</a
+        >
+        <div class="nav-links">
+          <a href="../index.html">Início</a>
+          <a href="Menu.html">Menu</a>
+          <a href="Galeria.html">Galeria</a>
+          <a href="Testemunhos.html">Testemunhos</a>
+          <a href="Reservas.html">Reservas</a>
+          <a href="Sobre.html">Sobre</a>
+          <a href="Contactos.html">Contactos</a>
+          <a class="active" href="FAQ.html">FAQ</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page">
+      <div class="breadcrumbs">
+        <a href="../index.html">Início</a> &gt; <span>FAQ</span>
+      </div>
+
+      <section class="page-title">
+        <h1>Perguntas Frequentes</h1>
+        <p>Tire as suas dúvidas sobre o funcionamento, reservas e conceito do nosso restaurante.</p>
+      </section>
+
+      <section class="faq-layout">
+        <!-- Sidebar Filtros -->
+        <div class="faq-sidebar">
+          <div class="panel">
+            <h2>Categorias</h2>
+            <div class="faq-categories">
+              <button type="button" class="category-btn active" data-filter="all">
+                Todas as Perguntas
+              </button>
+              <button type="button" class="category-btn" data-filter="reservas">
+                Reservas e Mesas
+              </button>
+              <button type="button" class="category-btn" data-filter="cozinha">
+                Menu e Cozinha
+              </button>
+              <button type="button" class="category-btn" data-filter="funcionamento">
+                Horários e Eventos
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lista Accordion FAQ -->
+        <div class="faq-list" id="faq-container">
+          <!-- Reservas -->
+          <article class="faq-card" data-category="reservas">
+            <button type="button" class="faq-question">
+              <span>Como posso fazer uma reserva?</span>
+              <span class="faq-chevron">
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Pode efetuar a sua reserva diretamente no nosso site através da página de <a href="Reservas.html">Reservas</a>. Basta selecionar uma mesa disponível na representação física do painel, preencher os dados do formulário e confirmar. Também pode contactar-nos diretamente via WhatsApp através do ícone flutuante.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-card" data-category="reservas">
+            <button type="button" class="faq-question">
+              <span>Existe um limite de tempo de tolerância para atrasos?</span>
+              <span class="faq-chevron">
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Sim, temos uma tolerância de 15 minutos em relação ao horário reservado. Se não comparecer dentro desse período e não nos notificar, a reserva será cancelada e a mesa disponibilizada para outros clientes.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-card" data-category="reservas">
+            <button type="button" class="faq-question">
+              <span>Como posso alterar ou cancelar a minha reserva?</span>
+              <span class="faq-chevron">
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Para alterar ou cancelar, solicitamos que nos envie uma mensagem no WhatsApp ou nos ligue com pelo menos 12 horas de antecedência em relação ao horário da sua reserva.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Menu e Cozinha -->
+          <article class="faq-card" data-category="cozinha">
+            <button type="button" class="faq-question">
+              <span>Têm opções vegetarianas, veganas ou restrições alimentares?</span>
+              <span class="faq-chevron">
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Sim! No nosso <a href="Menu.html">Menu</a> encontra variadas opções vegetarianas sinalizadas. Caso tenha alergias alimentares graves (glúten, lactose, frutos secos), por favor alerte os nossos funcionários antes de efetuar o pedido para que possamos tomar todas as precauções na preparação.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-card" data-category="cozinha">
+            <button type="button" class="faq-question">
+              <span>Como garantem a qualidade e frescura dos ingredientes?</span>
+              <span class="faq-chevron">
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>O Sabor & Arte preza pela frescura extrema. Trabalhamos em parceria com fornecedores locais e agricultores angolanos para receber legumes e carnes selecionadas todas as manhãs. Todos os caldos, molhos e massas são preparados diariamente pelos nossos chefs.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Horários e Eventos -->
+          <article class="faq-card" data-category="funcionamento">
+            <button type="button" class="faq-question">
+              <span>Quais são os vossos horários de funcionamento?</span>
+              <span class="faq-chevron">
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Funcionamos de Segunda a Sexta-feira das 07:00 às 23:00, e Sábados e Domingos das 07:00 às 20:00. O horário de almoço inicia às 12:00 e o jantar é servido até 30 minutos antes do encerramento.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-card" data-category="funcionamento">
+            <button type="button" class="faq-question">
+              <span>Realizam eventos privados ou almoços de grandes grupos?</span>
+              <span class="faq-chevron">
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Com certeza. Aceitamos reservas de grandes grupos e encerramos o espaço para festas privadas, aniversários e banquetes corporativos sob marcação prévia. Visite a nossa página de <a href="Contactos.html">Contactos</a> para nos enviar um pedido detalhado e obter orçamentos.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-card" data-category="funcionamento">
+            <button type="button" class="faq-question">
+              <span>Quais as formas de pagamento disponíveis?</span>
+              <span class="faq-chevron">
+                <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>Aceitamos terminais de pagamento Multicaixa (cartões de débito nacionais e cartões de crédito aceites no sistema), transferências bancárias instantâneas mediante comprovativo na hora, e numerário.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3><span class="brand-icon">🍴</span> Sabor & Arte</h3>
+          <p>
+            Experiência gastronômica única com ingredientes frescos e receitas
+            tradicionais.
+          </p>
+        </div>
+        <div>
+          <h3>Horário de Funcionamento</h3>
+          <p>
+            Segunda - Sexta: 07:00 - 23:00<br />Sábado - Domingo: 07:00 - 20:00
+          </p>
+        </div>
+        <div>
+          <h3>Contato</h3>
+          <p>
+            Telefone: (+244) 929516315<br />Email: contato@saborarte.com<br />Rua
+            dos Sabores, 123
+          </p>
+        </div>
+        <div>
+          <h3>Siga-nos</h3>
+          <ul class="social-links">
+            <li>
+              <a href="https://facebook.com/SaboresArtes" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/SaboresArtesn" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/sabores-artes" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg>
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="copyright">
+        © 2026 Sabor & Arte. Todos os direitos reservados.
+        <span class="footer-legal-links">
+          <a href="PoliticaPrivacidade.html">Política de Privacidade</a>
+          <span>|</span>
+          <a href="TermosUso.html">Termos de Uso</a>
+        </span>
+      </p>
+    </footer>
+    <script src="../JS/shared.js"></script>
+    <script src="../JS/faq.js"></script>
+  </body>
+</html>

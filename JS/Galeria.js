@@ -6,6 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalTitle = document.querySelector('#gallery-modal-title');
   const closeButton = document.querySelector('#gallery-close');
 
+  function applyFilter(filter) {
+    galleryItems.forEach((item) => {
+      const isVisible = filter === 'all' || item.dataset.galleryCategory === filter;
+      item.hidden = !isVisible;
+      if (isVisible) {
+        item.classList.add('is-visible');
+      }
+    });
+  }
+
   filterButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const filter = button.dataset.galleryFilter;
@@ -13,11 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
       filterButtons.forEach((item) => item.classList.remove('active'));
       button.classList.add('active');
 
-      galleryItems.forEach((item) => {
-        item.hidden = filter !== 'all' && item.dataset.galleryCategory !== filter;
-      });
+      applyFilter(filter);
     });
   });
+
+  // Inicializar o filtro ativo ao carregar para garantir a visibilidade
+  const activeFilterBtn = document.querySelector('[data-gallery-filter].active') || filterButtons[0];
+  if (activeFilterBtn) {
+    applyFilter(activeFilterBtn.dataset.galleryFilter);
+  }
 
   galleryItems.forEach((item) => {
     item.addEventListener('click', () => {
