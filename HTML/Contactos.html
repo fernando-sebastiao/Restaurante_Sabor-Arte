@@ -43,7 +43,7 @@
           <h2>Informações</h2>
           <p><strong>Telefone:</strong> (+244) 929516315</p>
           <p><strong>Email:</strong> contato@saborarte.com</p>
-          <p><strong>Endereço:</strong> Rua dos Sabores, 123 - São Paulo</p>
+          <p><strong>Endereço:</strong> Universidade Católica de Angola, Av. Pedro de Castro Van-Dúnem Loy, Luanda</p>
           <p>
             <strong>Horário:</strong>
             Segunda a Sexta, 07:00 - 23:00
@@ -61,24 +61,38 @@
         </form>
       </section>
 
-      <section class="location-card" id="localizacao">
-        <div class="location-copy">
-          <h2>Localização da Empresa</h2>
-          <p>Encontre-nos em Rua dos Sabores, 123 - São Paulo.</p>
-          <a
-            class="map-link"
-            href="https://www.openstreetmap.org/?mlat=-23.5505&mlon=-46.6333#map=16/-23.5505/-46.6333"
-            target="_blank"
-            rel="noopener"
+      <section class="map__section" id="localizacao">
+        <div class="map__container">
+          <div class="map__copy">
+            <div>
+              <h2 class="map__title">
+                <span class="map__title-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 21s7-4.44 7-11a7 7 0 0 0-14 0c0 6.56 7 11 7 11Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+                </span>
+                Onde nos Encontrar
+              </h2>
+              <p class="map__subtitle">Visite o Restaurante Sabor & Arte na Universidade Católica de Angola, em Luanda.</p>
+            </div>
+            <a
+              class="map-link"
+              href="https://www.openstreetmap.org/?mlat=-8.85761&mlon=13.28194#map=17/-8.85761/13.28194"
+              target="_blank"
+              rel="noopener"
+            >
+              Abrir localização no mapa
+            </a>
+          </div>
+          <div
+            id="map"
+            class="map__box"
+            aria-label="Mapa interativo com a localização do Restaurante Sabor & Arte na Universidade Católica de Angola"
           >
-            Abrir localização no mapa
-          </a>
+            <div class="map__placeholder">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Z"></path><path d="M9 3v15"></path><path d="M15 6v15"></path></svg>
+              <p>Carregando mapa interativo...</p>
+            </div>
+          </div>
         </div>
-        <div
-          id="company-map"
-          class="company-map"
-          aria-label="Mapa com a localização do Restaurante Sabor & Arte"
-        ></div>
       </section>
     </main>
 
@@ -100,8 +114,7 @@
         <div>
           <h3>Contato</h3>
           <p>
-            Telefone: (+244) 929516315<br />Email: contato@saborarte.com<br />Rua
-            dos Sabores, 123<br /><a class="footer-map-link" href="#localizacao">Ver localização no mapa</a>
+            Telefone: (+244) 929516315<br />Email: contato@saborarte.com<br />Universidade Católica de Angola, Luanda<br /><a class="footer-map-link" href="#localizacao">Ver localização no mapa</a>
           </p>
         </div>
         <div>

@@ -3,12 +3,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const nomeInput = document.getElementById("contacto-nome");
   const emailInput = document.getElementById("contacto-email");
   const mensagemInput = document.getElementById("contacto-mensagem");
-  const mapContainer = document.getElementById("company-map");
+  const mapContainer = document.getElementById("map") || document.getElementById("company-map");
 
   if (mapContainer) {
+    const companyLocation = [-8.85761, 13.28194];
+    const mapUrl = "https://www.openstreetmap.org/?mlat=-8.85761&mlon=13.28194#map=17/-8.85761/13.28194";
+
     if (window.L) {
-      const companyLocation = [-23.5505, -46.6333];
-      const map = L.map(mapContainer).setView(companyLocation, 16);
+      mapContainer.innerHTML = "";
+      const map = L.map(mapContainer, {
+        scrollWheelZoom: false
+      }).setView(companyLocation, 17);
 
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
@@ -17,10 +22,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       L.marker(companyLocation)
         .addTo(map)
-        .bindPopup("<strong>Sabor & Arte</strong><br>Rua dos Sabores, 123 - São Paulo")
+        .bindPopup("<strong>Restaurante Sabor & Arte</strong><br>Universidade Católica de Angola<br>Av. Pedro de Castro Van-Dúnem Loy, Luanda")
         .openPopup();
+
+      L.circle(companyLocation, {
+        radius: 85,
+        color: "#c7822b",
+        fillColor: "#c7822b",
+        fillOpacity: 0.12,
+        weight: 2
+      }).addTo(map);
     } else {
-      mapContainer.innerHTML = '<a class="map-link" href="https://www.openstreetmap.org/?mlat=-23.5505&mlon=-46.6333#map=16/-23.5505/-46.6333" target="_blank" rel="noopener">Abrir localização no mapa</a>';
+      mapContainer.innerHTML = `<div class="map__placeholder"><p>Não foi possível carregar o mapa interativo.</p><a class="map-link" href="${mapUrl}" target="_blank" rel="noopener">Abrir localização no mapa</a></div>`;
     }
   }
 
