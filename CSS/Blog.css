@@ -1,0 +1,336 @@
+/* Blog.css - Restaurante Sabor & Arte */
+
+.blog-page {
+  padding-bottom: 80px;
+}
+
+/* Hero do Blog */
+.blog-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--surface-soft);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-hero h1 {
+  font-size: 2.8rem;
+  margin: 0 0 16px 0;
+  color: var(--ink);
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.blog-hero p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Layout de Duas Colunas (Artigos + Sidebar) */
+.blog-layout {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+}
+
+/* Coluna de Artigos */
+.blog-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.blog-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.blog-card-image {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.05);
+}
+
+.blog-card-content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.blog-category {
+  background: var(--accent-soft);
+  color: var(--gold);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.blog-card h2 {
+  font-size: 1.8rem;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.blog-card h2 a {
+  color: var(--ink);
+  transition: color 0.2s ease;
+}
+
+.blog-card h2 a:hover {
+  color: var(--orange);
+}
+
+.blog-card p {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  font-size: 1.05rem;
+  flex-grow: 1;
+}
+
+.blog-read-more {
+  align-self: flex-start;
+  color: var(--orange);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.blog-read-more:hover {
+  color: var(--orange-dark);
+  gap: 12px;
+}
+
+.blog-read-more::after {
+  content: "→";
+  font-size: 1.1rem;
+}
+
+/* Coluna Lateral (Sidebar) */
+.blog-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sidebar-widget {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px var(--shadow);
+}
+
+.sidebar-widget h3 {
+  font-size: 1.25rem;
+  margin: 0 0 20px 0;
+  border-bottom: 2px solid var(--orange);
+  padding-bottom: 10px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Pesquisa Widget */
+.search-form {
+  display: flex;
+  gap: 8px;
+}
+
+.search-input {
+  flex-grow: 1;
+  background: var(--field);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: var(--orange);
+}
+
+.btn-search {
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-search:hover {
+  background: var(--orange-dark);
+}
+
+/* Categorias Widget */
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  margin-bottom: 12px;
+}
+
+.category-list li:last-child {
+  margin-bottom: 0;
+}
+
+.category-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--muted);
+  padding: 8px 0;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  font-weight: 500;
+}
+
+.category-list a:hover {
+  color: var(--orange);
+  padding-left: 6px;
+}
+
+.category-count {
+  background: var(--surface-soft);
+  color: var(--muted);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid var(--line);
+}
+
+/* Newsletter Widget */
+.newsletter-widget p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.newsletter-input {
+  background: var(--field);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.newsletter-input:focus {
+  border-color: var(--orange);
+}
+
+.btn-subscribe {
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  text-align: center;
+}
+
+.btn-subscribe:hover {
+  background: var(--orange-dark);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .blog-card-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-hero {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+  }
+  
+  .blog-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .blog-hero p {
+    font-size: 1rem;
+  }
+  
+  .blog-card-content {
+    padding: 24px;
+  }
+  
+  .blog-card h2 {
+    font-size: 1.5rem;
+  }
+}
