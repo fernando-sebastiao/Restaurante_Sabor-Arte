@@ -31,8 +31,70 @@ form.contact-card {
   gap: 16px;
 }
 
+.location-card {
+  margin-top: 28px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.location-copy {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.location-copy h2 {
+  margin: 0 0 10px;
+  color: var(--gold);
+}
+
+.location-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.map-link,
+.footer-map-link {
+  color: var(--gold);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.map-link {
+  flex: 0 0 auto;
+  margin-top: 4px;
+}
+
+.footer-map-link:hover,
+.map-link:hover {
+  color: var(--orange);
+}
+
+.company-map {
+  width: 100%;
+  min-height: 360px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--surface-soft);
+}
+
 @media (max-width: 820px) {
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .location-copy {
+    display: grid;
+  }
+
+  .map-link {
+    margin-top: 0;
   }
 }

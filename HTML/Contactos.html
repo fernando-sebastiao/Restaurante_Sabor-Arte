@@ -10,6 +10,7 @@
     <meta property="og:description" content="Telefone, email, endereço e horário do Restaurante Sabor & Arte." />
     <meta property="og:image" content="https://saborarte.com/MEDIA/hero-restaurant.jpg" />
     <title>Contactos | Restaurante Sabor & Arte</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="../CSS/shared.css" />
     <link rel="stylesheet" href="../CSS/Contactos.css" />
   </head>
@@ -59,6 +60,26 @@
           <button type="submit" class="btn primary full" id="btn-submit-contacto">Enviar Mensagem</button>
         </form>
       </section>
+
+      <section class="location-card" id="localizacao">
+        <div class="location-copy">
+          <h2>Localização da Empresa</h2>
+          <p>Encontre-nos em Rua dos Sabores, 123 - São Paulo.</p>
+          <a
+            class="map-link"
+            href="https://www.openstreetmap.org/?mlat=-23.5505&mlon=-46.6333#map=16/-23.5505/-46.6333"
+            target="_blank"
+            rel="noopener"
+          >
+            Abrir localização no mapa
+          </a>
+        </div>
+        <div
+          id="company-map"
+          class="company-map"
+          aria-label="Mapa com a localização do Restaurante Sabor & Arte"
+        ></div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -80,7 +101,7 @@
           <h3>Contato</h3>
           <p>
             Telefone: (+244) 929516315<br />Email: contato@saborarte.com<br />Rua
-            dos Sabores, 123
+            dos Sabores, 123<br /><a class="footer-map-link" href="#localizacao">Ver localização no mapa</a>
           </p>
         </div>
         <div>
@@ -109,9 +130,15 @@
       </div>
       <p class="copyright">
         © 2026 Sabor & Arte. Todos os direitos reservados.
+        <span class="footer-legal-links">
+          <a href="PoliticaPrivacidade.html">Política de Privacidade</a>
+          <span>|</span>
+          <a href="TermosUso.html">Termos de Uso</a>
+        </span>
       </p>
     </footer>
     <script src="../JS/shared.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="../JS/contactos.js"></script>
   </body>
 </html>

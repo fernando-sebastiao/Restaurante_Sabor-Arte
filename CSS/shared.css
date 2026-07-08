@@ -85,22 +85,23 @@ img {
 
 .nav {
   position: relative;
-  width: min(1100px, calc(100% - 32px));
-  min-height: 66px;
+  width: min(1180px, calc(100% - 40px));
+  min-height: 78px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 32px;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-size: 18px;
+  gap: 10px;
+  font-size: 22px;
   font-weight: 700;
   white-space: nowrap;
+  min-width: 0;
 }
 
 .brand-icon {
@@ -112,8 +113,10 @@ img {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 20px;
-  font-size: 14px;
+  justify-content: flex-end;
+  gap: 26px;
+  font-size: 16px;
+  font-weight: 700;
   color: var(--muted);
 }
 
@@ -152,6 +155,37 @@ img {
   outline-offset: 3px;
 }
 
+.nav-menu-toggle {
+  display: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+
+.nav-menu-toggle:hover {
+  background: var(--surface-soft);
+  transform: translateY(-1px);
+}
+
+.nav-menu-toggle:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--gold) 35%, transparent);
+  outline-offset: 3px;
+}
+
+.nav-menu-toggle svg {
+  width: 31px;
+  height: 31px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+}
+
 .theme-toggle.floating {
   position: fixed;
   top: 24px;
@@ -161,6 +195,63 @@ img {
   border-color: rgba(255, 255, 255, .24);
   color: #ffd68f;
   backdrop-filter: blur(12px);
+}
+
+.floating-actions {
+  position: fixed;
+  right: max(18px, env(safe-area-inset-right));
+  bottom: max(24px, env(safe-area-inset-bottom));
+  z-index: 60;
+  display: grid;
+  gap: 14px;
+}
+
+.floating-action {
+  display: inline-grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border: 0;
+  border-radius: 50%;
+  color: #ffffff;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, .22);
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+}
+
+.floating-action:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 34px rgba(0, 0, 0, .28);
+}
+
+.floating-action:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--gold) 45%, transparent);
+  outline-offset: 4px;
+}
+
+.floating-action svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.floating-action.back-to-top {
+  background: #151b2b;
+}
+
+.floating-action.whatsapp {
+  background: #25d366;
+}
+
+.floating-action.whatsapp svg {
+  width: 31px;
+  height: 31px;
+  fill: currentColor;
+  stroke: none;
 }
 
 .btn {
@@ -286,6 +377,17 @@ label {
   color: #b8b2ad;
 }
 
+.footer-map-link {
+  color: var(--gold);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-map-link:hover {
+  color: var(--white);
+}
+
 .social-links {
   list-style: none;
   padding: 0;
@@ -320,6 +422,63 @@ label {
   font-size: 14px;
 }
 
+.footer-legal-links {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  color: #b8b2ad;
+}
+
+.footer-legal-links a {
+  color: #d9d4ce;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color .2s ease;
+}
+
+.footer-legal-links a:hover {
+  color: var(--white);
+}
+
+.legal-page {
+  max-width: 900px;
+}
+
+.legal-content {
+  display: grid;
+  gap: 22px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.legal-content section {
+  display: grid;
+  gap: 10px;
+}
+
+.legal-content h2 {
+  margin: 0;
+  color: var(--gold);
+  font-size: 22px;
+}
+
+.legal-content p,
+.legal-content li {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.legal-content ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(28px);
@@ -350,22 +509,78 @@ label {
 
 @media (max-width: 760px) {
   .nav {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 16px 0;
+    width: min(100% - 32px, 680px);
+    min-height: 72px;
+    align-items: center;
+    padding: 10px 0;
+    gap: 12px;
+  }
+
+  .brand {
+    max-width: calc(100% - 116px);
+    overflow: hidden;
+    font-size: clamp(18px, 5vw, 23px);
+    text-overflow: ellipsis;
   }
 
   .nav-links {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    display: none;
     width: 100%;
-    gap: 14px;
-    overflow-x: auto;
-    padding-bottom: 4px;
+    max-height: min(72vh, 430px);
+    overflow-y: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface);
+    box-shadow: 0 18px 38px var(--shadow);
+  }
+
+  .nav.nav-open .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 13px 14px;
+    border-radius: 10px;
+  }
+
+  .nav-links a:hover,
+  .nav-links .active {
+    background: var(--surface-soft);
   }
 
   .theme-toggle {
     position: absolute;
-    top: 16px;
+    top: 14px;
+    right: 54px;
+    border: 0;
+    background: transparent;
+    font-size: 24px;
+  }
+
+  .nav-menu-toggle {
+    position: absolute;
+    top: 12px;
     right: 0;
+    display: inline-grid;
+  }
+
+  .floating-actions {
+    right: max(18px, env(safe-area-inset-right));
+    bottom: max(22px, env(safe-area-inset-bottom));
+    gap: 12px;
+  }
+
+  .floating-action {
+    width: 56px;
+    height: 56px;
   }
 
   .footer-grid {

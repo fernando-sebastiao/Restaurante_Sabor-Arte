@@ -3,6 +3,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const nomeInput = document.getElementById("contacto-nome");
   const emailInput = document.getElementById("contacto-email");
   const mensagemInput = document.getElementById("contacto-mensagem");
+  const mapContainer = document.getElementById("company-map");
+
+  if (mapContainer) {
+    if (window.L) {
+      const companyLocation = [-23.5505, -46.6333];
+      const map = L.map(mapContainer).setView(companyLocation, 16);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+      }).addTo(map);
+
+      L.marker(companyLocation)
+        .addTo(map)
+        .bindPopup("<strong>Sabor & Arte</strong><br>Rua dos Sabores, 123 - São Paulo")
+        .openPopup();
+    } else {
+      mapContainer.innerHTML = '<a class="map-link" href="https://www.openstreetmap.org/?mlat=-23.5505&mlon=-46.6333#map=16/-23.5505/-46.6333" target="_blank" rel="noopener">Abrir localização no mapa</a>';
+    }
+  }
 
   if (!form) return;
 
