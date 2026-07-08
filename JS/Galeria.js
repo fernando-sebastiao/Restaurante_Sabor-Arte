@@ -14,6 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
         item.classList.add('is-visible');
       }
     });
+
+    // Garantir que a grid da galeria fique visível imediatamente, tal como no menu
+    const galleryGrid = document.querySelector('.gallery-grid');
+    if (galleryGrid) {
+      galleryGrid.classList.add('is-visible');
+    }
   }
 
   filterButtons.forEach((button) => {
