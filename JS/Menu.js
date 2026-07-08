@@ -30,12 +30,17 @@ document.addEventListener('DOMContentLoaded', () => {
         card.hidden = !isVisible;
 
         if (isVisible) {
+          card.classList.add('is-visible');
           sectionVisibleCount += 1;
           visibleCount += 1;
         }
       });
 
       section.hidden = sectionVisibleCount === 0;
+
+      if (sectionVisibleCount > 0) {
+        section.classList.add('is-visible');
+      }
     });
 
     emptyState.hidden = visibleCount !== 0;
@@ -52,4 +57,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   searchInput.addEventListener('input', applyFilters);
+  applyFilters();
 });

@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!form || !testimonialsGrid) return;
 
   // Manter controle de avaliacoes locais para recalcular a media
-  let numAvaliacoes = 6;
-  let totalEstrelas = 5 * 5 + 4; // 5 avaliações de 5 estrelas + 1 de 4 estrelas = 29 estrelas
+  let numAvaliacoes = 12;
+  let totalEstrelas = 58; // 10 avaliações de 5 estrelas + 2 de 4 estrelas = 58 estrelas
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
