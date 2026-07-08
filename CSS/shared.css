@@ -534,8 +534,9 @@ label {
     overflow-y: auto;
     flex-direction: column;
     align-items: stretch;
+    justify-content: flex-start;
     gap: 4px;
-    padding: 12px;
+    padding: 16px 12px 12px;
     border: 1px solid var(--line);
     border-radius: 14px;
     background: var(--surface);
